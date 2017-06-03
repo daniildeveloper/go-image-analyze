@@ -26,8 +26,8 @@ func getImages(dir string) [][]pixel {
 			return nil
 		}
 		img := loadImage(path)
-		// pixels := getPixels(img)
-		// images = append(images, pixels)
+		pixels := getPixels(img)
+		images = append(images, pixels)
 		return nil
 	})
 
@@ -66,4 +66,5 @@ func getPixels(img image.Image) []pixel {
 		pixels[i].a = a
 
 	}
+	return pixels
 }
