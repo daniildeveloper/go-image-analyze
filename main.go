@@ -14,7 +14,16 @@ type pixel struct {
 }
 
 func main() {
-	fmt.Println("fmt")
+	images := getImages("./images/")
+
+	for i, img := range images {
+		for j, pixel := range img {
+			fmt.Println("Image ", i, "\t pixel ", j, "\t r,g,b,a", pixel)
+			if j == 10 {
+				break
+			}
+		}
+	}
 }
 
 // get all images from given folder
