@@ -28,7 +28,7 @@ func main() {
 
 // get all images from given folder
 func getImages(dir string) [][]pixel {
-	var images [][]pixel
+	var images [][]pixel //crete multimensional slice stores images. also list of images in pixels
 
 	filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
